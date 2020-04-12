@@ -43,6 +43,14 @@
             <option value="teacher">Your first teacher?</option>
           </select>
         </div>
+        <div class="form-group">
+          <textarea name="secretAnswer"
+                    class="form-control"
+                    rows="3"
+                    [(ngModel)]="answer">
+          </textarea>
+        </div>
+        <p *ngIf="answer !== ''">Your reply : {{ answer }}</p>
         <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
       </form>
     </div>

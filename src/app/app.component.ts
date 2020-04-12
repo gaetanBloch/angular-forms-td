@@ -8,6 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   readonly defaultQuestion = 'pet';
+  answer = '';
   @ViewChild('form', {static: false}) signUpForm: NgForm;
 
   // onSubmit(form: NgForm): void {
