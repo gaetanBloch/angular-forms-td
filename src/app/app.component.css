@@ -13,3 +13,7 @@ input.ng-invalid.ng-touched {
 .help-block {
   color: red;
 }
+
+h3 {
+  margin-top: 0;
+}
