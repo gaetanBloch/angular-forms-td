@@ -54,6 +54,19 @@
           </textarea>
         </div>
         <p *ngIf="answer !== ''">Your reply : {{ answer }}</p>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <div class="radio" id="gender" *ngFor="let gender of genders">
+            <label for="{{ gender }}">
+              <input type="radio"
+                     name="gender"
+                     id="{{ gender }}"
+                     [value]="gender"
+                     [ngModel]="defaultGender">
+              {{ gender }}
+            </label>
+          </div>
+        </div>
         <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
       </form>
     </div>

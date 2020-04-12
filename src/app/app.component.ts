@@ -7,9 +7,11 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  readonly defaultQuestion = 'pet';
-  answer = '';
   @ViewChild('form', {static: false}) signUpForm: NgForm;
+  readonly defaultQuestion = 'pet';
+  readonly defaultGender = 'male';
+  answer = '';
+  genders = ['male', 'female', 'other'];
 
   // onSubmit(form: NgForm): void {
   //   console.log(form);
