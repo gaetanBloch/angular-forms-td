@@ -36,6 +36,20 @@ export class AppComponent {
     this.user.secretQuestion = this.signUpForm.value.secret;
     this.user.answer = this.signUpForm.value.secretAnswer;
     this.user.gender = this.signUpForm.value.gender;
+
+    // This reset all the values
+    // this.signUpForm.reset();
+
+    // This reset the value with some already filled
+    this.signUpForm.reset({
+      userData: {
+        username: '',
+        email: ''
+      },
+      secret: this.defaultQuestion,
+      secretAnswer: '',
+      gender: this.defaultGender
+    });
   }
 
   suggestUsername(): void {
